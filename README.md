@@ -1,3 +1,10 @@
+~~~~
+NOTE
+Projet installé tourne très bien. Fonctionnalités fonctionnent toutes.
+Tentative de rajouter la langue avec un selecteur, mais mauvaise gestion des fichiers qui se multiplient.
+Création des fichiers pour la bdd, pas parvenu à faire tourner la base de données et l'utiliser.
+~~~~
+
 # Share Code Plus
 
 Extension de Share Code : meta données, log utilisateurs, SQL, coloration de code
