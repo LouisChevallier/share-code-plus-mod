@@ -31,9 +31,10 @@ def edit(uid):
 
 @app.route('/publish',methods=['POST'])
 def publish():
+    langage = request.form['langage']
     code = request.form['code']
     uid  = request.form['uid']
-    save_doc_as_file(uid,code)
+    save_doc_as_file(uid,code,langage)
     return redirect("{}{}/{}".format(request.host_url,
                                      request.form['submit'],
                                      uid))

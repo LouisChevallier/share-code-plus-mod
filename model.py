@@ -12,15 +12,19 @@ def create_uid(n=9):
                         if c not in '0OIl'  ]
    return ''.join( ( choice(chrs) for i in range(n) ) ) 
 
-def save_doc_as_file(uid=None,code=None):
+def save_doc_as_file(uid=None,code=None,langage=None):
     '''Crée/Enregistre le document sous la forme d'un fichier
     data/uid. Return the file name.
     '''
     if uid is None:
         uid = create_uid()
         code = '# Write your code here...'
-    with open('data/{}'.format(uid),'w') as fd:
-        fd.write(code)
+    if langage is None:
+        with open('data/{}'.format(uid), 'w') as fd:
+            fd.write(code)
+    else:
+        with open('data/{}{}'.format(uid,'.' + langage), 'w') as fd:
+            fd.write(code)
     return uid
 
 def read_doc_as_file(uid):
